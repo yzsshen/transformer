@@ -1,20 +1,20 @@
-# Product Name
-> Short blurb about what your product does.
+# Transformer Exploration
+> Transformers and Transformer Accessories
 
 <!-- [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url] -->
 
-One to two paragraph statement about your product and what it does.
+This repository contains implementations of transformers and transformer-related architectures. Improvements and additions to the architecture that have been researched and published throughout the years since Attention Is All You Need was published will also be implemented and tested.
 
-![](header.png)
+![Attention Is All You Need](attention.png)
 
 ## Installation
 
 git clone this repo:
 
 ```
-git clone https://github.com/yzsshen/repo-template.git
+git clone https://github.com/yzsshen/transformer.git
 ```
 
 install requirements: #TODO
@@ -37,6 +37,8 @@ edit autoexec.bat
 
 A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
 
+![Transformer Architecture](transformer.png)
+
 <!-- _For more examples and usage, please refer to the [Wiki][wiki]._ -->
 
 <!-- ## Development setup
@@ -50,7 +52,7 @@ npm test
 
 ## Release History
 
-* 0.2.1
+<!-- * 0.2.1
     * CHANGE: Update docs (module code remains unchanged)
 * 0.2.0
     * CHANGE: Remove `setDefaultXYZ()`
@@ -59,16 +61,23 @@ npm test
     * FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
 * 0.1.0
     * The first proper release
-    * CHANGE: Rename `foo()` to `bar()`
+    * CHANGE: Rename `foo()` to `bar()` -->
 * 0.0.1
-    * Work in progress
+    * Create repository and add README
 
 ## Things to Do
-* Work in Progress
+* Implement [Transformer](https://arxiv.org/abs/1706.03762)
+    * [The Annotated Transformer](http://nlp.seas.harvard.edu/annotated-transformer/)
+* Implement [Differential Transformer](https://arxiv.org/abs/2410.05258)
+    * https://github.com/microsoft/unilm/tree/master/Diff-Transformer
+* Implement [nGPT](https://arxiv.org/abs/2410.01131)
+    * https://github.com/NVIDIA/ngpt
+* Implement [RoPE](https://arxiv.org/abs/2104.09864)
+    * (https://arxiv.org/abs/2410.06205)
 
 ## Known Issues
-* Issue 
-  * Issue Details
+* Needs more transformers 
+  * And transformer accessories
 
 ## Meta
 
@@ -80,17 +89,9 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 
 ## Contributing
 
-1. Fork it (<https://github.com/yzsshen/repo-template/fork>)
+1. Fork it (<https://github.com/yzsshen/transformer/fork>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
 5. Create a new Pull Request
-
-<!-- Markdown link & img dfn's -->
-<!-- [npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
-[wiki]: https://github.com/yourname/yourproject/wiki -->
 
