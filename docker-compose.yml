@@ -1,0 +1,28 @@
+services:
+  pytorch-rocm:
+    image: rocm/pytorch:transformer
+    privileged: true
+    devices:
+      - /dev/kfd
+      - /dev/dri
+    security_opt:
+      - seccomp=unconfined
+    cap_add:
+      - SYS_PTRACE
+    group_add:
+      - video
+    ipc: host
+    shm_size: 8G
+    volumes:
+      - .:/project
+    ports:
+      - "8889:8889"
+    working_dir: /project
+    tty: true
+    stdin_open: true
+    command: >
+      bash -c "
+        conda init bash &&
+        echo 'conda activate py_3.10' >> ~/.bashrc &&
+        jupyter notebook --ip 0.0.0.0 --port 8889 --no-browser --allow-root &&
+        tail -f /dev/null"
